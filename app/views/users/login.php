@@ -2,20 +2,21 @@
 <?php $attributes = array('id' => 'login_form', 'class' => 'form-horizontal');  ?>
 
 <!-- user/login:: user == class in controller && login:: methode inside user class -->
-<?php echo form_open('user/login', $attributes); ?>
+<?php echo form_open('users/login', $attributes); ?>
 
 
 <!-- SIGNUP FORM BY PHP LIKE HTML -->
 <p>
-  <!-- USERNAME INPUT -->
-<?php echo form_label('Username:'); ?>
+<?php echo form_label('Email Address:'); ?>
 <?php
-    $data = array('name'        => 'username',
-                  'placeholder' => 'Enter your name',
-                  'style'       => 'width:90%',
-                  'value'       => set_value('username'));
+$data = array(
+              'name'        => 'email',
+              'placeholder' => 'Enter Your Email',
+              'style'       => 'width:90%',
+              'value'       => set_value('email')
+            );
 ?>
-<?php echo form_input($data);?>
+<?php echo form_input($data); ?>
 </p>
 <p>
   <!-- PASSWORD INPUT -->

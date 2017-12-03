@@ -82,3 +82,22 @@ $data = array(
     <?php echo form_submit($data); ?>
 </p>
 <?php echo form_close(); ?>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="" method="post">
+      <input type="text" name="first_name" value="">
+      <input type="text" name="last_name" value="">
+      <input type="email" name="email" value="">
+      <input type="text" name="username" value="">
+      <input type="password" name="password" value="">
+      <input type="password" name="password2" value="">
+      <input type="submit" name="submit" value="Register">
+    </form>
+  </body>
+</html> -->
