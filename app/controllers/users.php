@@ -85,9 +85,6 @@
      $this->session->unset_userdata('user_id');
      $this->session->unset_userdata('username');
      $this->session->sess_destroy();
-
-      //Set message
-     $this->session->set_flashdata('logged_out', 'You have been logged out');
      redirect('home/index');
  }
 
