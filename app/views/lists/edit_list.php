@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+
 <html>
 <head>
   <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <body>
-  <h1>Add a List</h1>
-  <p>Please fill out the form below to create a new task list</p>
+  <h1>Edit List</h1>
   <!--Display Errors-->
-  <?php echo validation_errors('<p class="text-error">'); ?>
-   <?php echo form_open('lists/add'); ?>
+   <?php echo validation_errors('<p class="text-error">'); ?>
+   <?php echo form_open('lists/edit/'.$this_list->id.''); ?>
   <!--Field: First Name-->
   <p>
   <?php echo form_label('List Name:'); ?>
   <?php
   $data = array(
                 'name'        => 'list_name',
-                'value'       => set_value('list_name')
+                'value'       => $this_list->list_name
               );
   ?>
   <?php echo form_input($data); ?>
@@ -27,20 +26,19 @@
   <?php
   $data = array(
                 'name'        => 'list_body',
-                'value'       => set_value('list_body')
+                'value'       => $this_list->list_body
               );
   ?>
   <?php echo form_textarea($data); ?>
   </p>
 
   <!--Submit Buttons-->
-  <?php $data = array("value" => "Add List",
+  <?php $data = array("value" => "Update List",
                       "name" => "submit",
                       "class" => "btn btn-primary"); ?>
   <p>
       <?php echo form_submit($data); ?>
   </p>
   <?php echo form_close(); ?>
-
 </body>
 </html>

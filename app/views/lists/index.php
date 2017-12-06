@@ -1,4 +1,13 @@
 <h1>Lists</h1>
+<?php if($this->session->flashdata('list_created')) : ?>
+    <?php echo '<p class="text-success">' .$this->session->flashdata('list_created') . '</p>'; ?>
+<?php endif; ?>
+<?php if($this->session->flashdata('list_updated')) : ?>
+    <?php echo '<p class="text-success">' .$this->session->flashdata('list_updated') . '</p>'; ?>
+<?php endif; ?>
+<?php if($this->session->flashdata('list_deleted')) : ?>
+    <?php echo '<p class="text-success">' .$this->session->flashdata('list_deleted') . '</p>'; ?>
+<?php endif; ?>
 <p>Your lists below</p>
 <ul class="list_items">
   <?php foreach ($lists as $list) : ?>

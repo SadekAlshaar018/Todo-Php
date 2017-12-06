@@ -1,9 +1,10 @@
 <ul id="actions">
   <h3>dash lists</h3>
-  <li><a href="#<?php echo base_url(); ?>tasks/add/<?php echo $list->id; ?>">Add</a></li>
-  <li><a href="#<?php echo base_url(); ?>lists/edit/<?php echo $list->id; ?>">Edit</a></li>
+  <li><a href="<?php echo base_url(); ?>tasks/add/<?php echo $list->id; ?>">Add</a></li>
+  <li><a href="<?php echo base_url(); ?>lists/edit/<?php echo $list->id; ?>">Edit</a></li>
   <li>
-    <a href="#<?php echo base_url(); ?>lists/delete/<?php echo $list->id;?>" onclick="return confirm('Do you want delete a list?')">Delete</a>
+    <a href="<?php echo base_url(); ?>lists/delete/<?php echo $list->id;?>"
+       onclick="return confirm('Do you want delete a list?')">Delete</a>
   </li>
 </ul>
 
